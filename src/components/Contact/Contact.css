@@ -1,0 +1,70 @@
+.container-contact {
+    display:flex;
+    justify-content: center;
+    padding-left: 9%;
+    width: 100%;
+    height: 4em;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    background: rgb(32, 32, 32);
+}
+
+.text-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.github-logo{
+    width: 15%;
+    margin-top: 2em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.519);
+    padding: 1em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+.linkedin-logo{
+    margin-top: 2em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.519);
+    padding: 1em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    width: 15%;
+}
+
+.email-logo{
+    margin-top: 2em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.519);
+    padding: 1em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    width: 15%;
+}
+
+.container-links{
+    justify-content: center;
+    margin-top: 2em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.519);
+    width: 84%;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+}

@@ -1,0 +1,18 @@
+.backbutton{
+    width: 8rem;
+    height: 1.7rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+    outline: none;
+    margin: 1em;
+}
+
+.backbutton:hover {
+    background-color: rgb(53, 53, 53);
+    color: white;
+    transform: translateY(-1px);
+}
