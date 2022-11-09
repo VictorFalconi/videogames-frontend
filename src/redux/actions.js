@@ -1,10 +1,11 @@
 import { ALL_VIDEOGAMES, ALL_GENRES, ALL_PLATFORMS, GAME_BY_NAME, GAME_BY_ID, CREATE_GAME, CLEAR_DETAIL, 
     CLEAR_SEARCH, CLEAR_FILTER, FILTER_BY_ORIGIN, FILTER_BY_GENRE, ORDER_BY_NAME, ORDER_BY_RATING, FILTER_BY_PLATFORMS } from "./actionTypes";
 
+const REQ_URL = 'https://videogames-backend-2910m82ee-victorfalconi.vercel.app/'
 
 export function getAllVideogames () {
     return function (dispatch) {
-        return fetch ('https://videogames-backend-2910m82ee-victorfalconi.vercel.app')
+        return fetch (REQ_URL)
         .then (response => response.json())
         .then (videogames => dispatch({type: ALL_VIDEOGAMES, payload: videogames}))
         .catch (error => alert ('Sorry, I cant get all videogames, please reload', error.message));
@@ -13,7 +14,7 @@ export function getAllVideogames () {
 
 export function getGameName (name) {
     return function (dispatch) {
-        return fetch (`https://videogames-backend-2910m82ee-victorfalconi.vercel.app?name=${name}`)
+        return fetch (REQ_URL + `?name=${name}`)
         .then (response => response.json())
         .then (game => dispatch({type: GAME_BY_NAME, payload: game}))
         .catch (error => dispatch({ type: GAME_BY_NAME, payload: error.message='Error' }));
@@ -22,7 +23,7 @@ export function getGameName (name) {
 
 export function getGameId (id) {
     return function (dispatch) {
-        return fetch (`https://videogames-backend-2910m82ee-victorfalconi.vercel.app/${id}`)
+        return fetch (REQ_URL + id)
         .then (response => response.json())
         .then (gameId => dispatch({type: GAME_BY_ID, payload: gameId}))
         .catch (error => dispatch({ type: GAME_BY_ID, payload: error.message='Error' }));
@@ -31,7 +32,7 @@ export function getGameId (id) {
 
 export function postNewGame (payload) {
     return function (dispatch) {
-        return fetch ('https://videogames-backend-2910m82ee-victorfalconi.vercel.app', {
+        return fetch (REQ_URL, {
             method: 'POST',
             body: JSON.stringify(payload),
             headers: {'Content-type': 'application/json; charset=UTF-8'}
@@ -44,7 +45,7 @@ export function postNewGame (payload) {
 
 export function getAllGenres () {
     return function (dispatch) {
-        return fetch ('https://videogames-backend-2910m82ee-victorfalconi.vercel.app/genres')
+        return fetch (REQ_URL + 'genres')
         .then (response => response.json())
         .then (genres => dispatch({type: ALL_GENRES, payload: genres}))
         .catch (error => console.log (error));
@@ -53,7 +54,7 @@ export function getAllGenres () {
 
 export function getAllPlatforms () {
     return function (dispatch) {
-        return fetch ('https://videogames-backend-2910m82ee-victorfalconi.vercel.app/platforms')
+        return fetch (REQ_URL + 'platforms')
         .then (response => response.json())
         .then (platforms => dispatch({type: ALL_PLATFORMS, payload: platforms}))
         .catch (error => console.log (error));
