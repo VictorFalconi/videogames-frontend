@@ -4,7 +4,7 @@ import { ALL_VIDEOGAMES, ALL_GENRES, ALL_PLATFORMS, GAME_BY_NAME, GAME_BY_ID, CR
 
 export function getAllVideogames () {
     return function (dispatch) {
-        return fetch ('https://videogames-backend.vercel.app/videogames')
+        return fetch ('videogames-backend-2910m82ee-victorfalconi.vercel.app')
         .then (response => response.json())
         .then (videogames => dispatch({type: ALL_VIDEOGAMES, payload: videogames}))
         .catch (error => alert ('Sorry, I cant get all videogames, please reload', error.message));
@@ -13,7 +13,7 @@ export function getAllVideogames () {
 
 export function getGameName (name) {
     return function (dispatch) {
-        return fetch (`https://videogames-backend.vercel.app/videogames?name=${name}`)
+        return fetch (`videogames-backend-2910m82ee-victorfalconi.vercel.app?name=${name}`)
         .then (response => response.json())
         .then (game => dispatch({type: GAME_BY_NAME, payload: game}))
         .catch (error => dispatch({ type: GAME_BY_NAME, payload: error.message='Error' }));
@@ -22,7 +22,7 @@ export function getGameName (name) {
 
 export function getGameId (id) {
     return function (dispatch) {
-        return fetch (`https://videogames-backend.vercel.app/videogames/${id}`)
+        return fetch (`videogames-backend-2910m82ee-victorfalconi.vercel.app/${id}`)
         .then (response => response.json())
         .then (gameId => dispatch({type: GAME_BY_ID, payload: gameId}))
         .catch (error => dispatch({ type: GAME_BY_ID, payload: error.message='Error' }));
@@ -31,7 +31,7 @@ export function getGameId (id) {
 
 export function postNewGame (payload) {
     return function (dispatch) {
-        return fetch ('https://videogames-backend.vercel.app/videogames', {
+        return fetch ('videogames-backend-2910m82ee-victorfalconi.vercel.app', {
             method: 'POST',
             body: JSON.stringify(payload),
             headers: {'Content-type': 'application/json; charset=UTF-8'}
