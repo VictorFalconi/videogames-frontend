@@ -13,7 +13,7 @@
     height: 36em;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
     border-radius: 1em;
-    background: radial-gradient(circle, rgba(247,97,3,1) 60%, rgba(253,48,29,1) 80%);
+    background: rgb(53, 53, 53);
 }
 
 .create-title{
@@ -38,13 +38,12 @@
 }
 
 .resetbutton:hover {
-    background-color: rgb(241, 72, 10);
+    background-color: rgb(53, 53, 53);
     color: white;
     transform: translateY(-1px);
 }
 
 .error{
-
     color: rgb(255, 1, 1);
     filter: drop-shadow(0 2px 9px rgba(255, 255, 255, 0.7));
     font-style: oblique;
@@ -69,7 +68,7 @@
 }
 
 .filters-form:hover {
-    background-color: rgb(241, 72, 10);
+    background-color: rgb(53, 53, 53);
     color: white;
     transform: translateY(-1px);
 }

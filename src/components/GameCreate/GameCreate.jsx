@@ -131,7 +131,6 @@ export default function GameCreate() {
                 <br/>
                 <br/>
                 <br/>
-                <button className='create-button' disabled={button} onClick={(e) => handleSubmit(e)} type='submit'>👾 CREATE VIDEOGAME</button>
             </div>
 
            <form className='form-container' onSubmit={(e) => handleSubmit(e)}>
@@ -223,7 +222,7 @@ export default function GameCreate() {
                     <textarea name='description' placeholder='Write your Videogame description...' value={input.description} type='text' rows='6' cols='59' onChange={handleChange}></textarea>
                     {error.description && (<p className='error'><small>{error.description}</small></p>)}
                     <br/>
-
+                    <button className='create-button' disabled={button} onClick={(e) => handleSubmit(e)} type='submit'>CREATE VIDEOGAME</button>
                 </div>
             </form>
         </div>
