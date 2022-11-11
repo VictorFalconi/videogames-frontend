@@ -12,7 +12,7 @@ export default function GameCard ({ name, image, genres, rating }) {
             <img className='image' src={image? image : imgdefault} alt='game cover'/>
             <h3 className='genre'>{genres.map((genre, id) => <span key={id}> {genre.name} </span>)}</h3>
             <div className='rating'>
-                {[0,0,0,0,0].fill(1, 0, Math.ceil(rating) - 1).map((e, i) => <img key={i} src={e ? star : grayStar} height='30px' alt='rating star'/>)}
+                {[0,0,0,0,0].fill(1, 0, Math.ceil(rating)).map((e, i) => <img key={i} src={e ? star : grayStar} height='30px' alt='rating star'/>)}
             </div>
         </div>
     );
