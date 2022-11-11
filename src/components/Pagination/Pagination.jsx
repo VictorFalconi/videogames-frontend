@@ -7,9 +7,9 @@ import "./Pagination.css";
 
 
 export const renderData = (videogame) => {
-	return videogame.map((game) => {
+	return videogame.map((game, i) => {
 		return (
-			<div key={game.id} >
+			<div key={i}>
 				<Link className='text-link' to={"/videogames/" + game.id} >
 					<GameCard name={game.name} image={game.image} genres={game.genres} rating={game.rating}/>
 				</Link>
