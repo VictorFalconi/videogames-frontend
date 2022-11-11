@@ -14,9 +14,8 @@
     margin-top: 2em;
     width: 37em;
     height: 32em;
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
     border-radius: 1em;
-    background: radial-gradient(circle, rgba(247,97,3,1) 60%, rgba(253,48,29,1) 80%);
+    background: rgb(75, 75, 75);
 }
 
 .img{
@@ -29,14 +28,12 @@
     color: white;
     font-weight: bolder;
     font-size: 3rem;
-    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
 }
 
 #clear {
     color: white;
     font-weight: bolder;
     font-size: 2rem;
-    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
     position: absolute;
     top: 16rem;
     width: 25rem;
