@@ -30,34 +30,26 @@ export default function GameDetails (props) {
     }
 
     return (
-
         <div className="container-details">
             <div className="detail-buttons">
                 <HomeButton/>
                 <BackButton/>
                 <h1>{game[0].name}</h1>
             </div>
-
             <div className="details" >
                 <div className="basic-details">
                     <img src={game[0].image? game[0].image : imgdefault} alt='img not found' />
-                   
                     <h3>ID: {game[0].id}</h3>
-                    
-                    <h3>Released: <br/>🗓️{game[0].released}</h3>
-                    
-                    <h3>Rating: <br/>⭐{game[0].rating}</h3>
-                    
-                    <h3>Platforms: <br/>{game[0].platforms.map(platform => '🕹️'+platform.name + ' ')}</h3>
-                    
-                    <h3>Genres: <br/>{game[0].genres.map(genre => '👾' + genre.name + ' ')}</h3>
-                   
+                    <h3>Released: <br/>{game[0].released}</h3>
+                    <h3>Rating: <br/>{game[0].rating}</h3> 
+                    <h3>Platforms: <br/>{game[0].platforms.map(platform =>platform.name + ' ')}</h3>
+                    <h3>Genres: <br/>{game[0].genres.map(genre =>genre.name + ' ')}</h3>
                 </div>
                 <div className='details-text'>
                     <h3>DESCRIPTION
                         <br/>
                         <br/>
-                        {game[0].description} </h3>
+                        {game[0].description}</h3>
                 </div>
             </div>
         </div>
