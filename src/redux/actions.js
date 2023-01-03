@@ -3,6 +3,24 @@ import { ALL_VIDEOGAMES, ALL_GENRES, ALL_PLATFORMS, GAME_BY_NAME, GAME_BY_ID, CR
 
 const REQ_URL = 'https://videogames-backend-production.up.railway.app/';
 
+export function deleteVideogame(name) {
+    return function(dispatch) {
+        return fetch(REQ_URL + 'videogames', {
+            method: 'DELETE',
+            body: {
+                name: name,
+            },
+            headers: {
+                'Access-Control-Allow-Origin' : 'https://videogames-frontend.vercel.app'
+            }
+        })
+        .then(_ => fetch (REQ_URL + 'videogames'))
+        .then (response => response.json())
+        .then (videogames => dispatch({type: ALL_VIDEOGAMES, payload: videogames}))
+        .catch (error => alert ('Sorry, I cant get all videogames, please reload', error.message));
+    }
+}
+
 export function getAllVideogames () {
     return function (dispatch) {
         return fetch (REQ_URL + 'videogames')
